@@ -14,7 +14,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "602696846756-cojt5skkmjjsvg4h536r95vl8ufl92in.apps.googleusercontent.com",
+          "client_id": "602696846756-grte1c7d0gh72v5phk1c1um4lvsu78ge.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -29,6 +29,13 @@
             {
               "client_id": "602696846756-cojt5skkmjjsvg4h536r95vl8ufl92in.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "602696846756-a4ds1di9tdsdis1og3edgi5lqm92knu6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.hollaBella"
+              }
             }
           ]
         }
