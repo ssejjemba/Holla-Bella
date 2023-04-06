@@ -121,6 +121,28 @@ class _LoginState extends State<Login> {
     );
   }
 
+  Widget _progressIndicator() {
+    return BlocConsumer<SignInFormBloc, SignInFormState>(
+        builder: (context, state) {
+          if (state.isSubmitting) {
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: const [
+                SizedBox(
+                  height: 8,
+                ),
+                LinearProgressIndicator(value: null)
+              ],
+            );
+          }
+
+          return const SizedBox(
+            height: 0,
+          );
+        },
+        listener: (context, state) {});
+  }
+
   Widget _submitButton() {
     return BlocConsumer<SignInFormBloc, SignInFormState>(
       listener: (context, state) {},
@@ -360,6 +382,7 @@ class _LoginState extends State<Login> {
                       _googleSignUpButton(),
                       SizedBox(height: height * .055),
                       _createAccountLabel(),
+                      _progressIndicator(),
                     ],
                   ),
                 ),

@@ -100,6 +100,28 @@ class _SignUpState extends State<SignUp> {
     );
   }
 
+  Widget _progressIndicator() {
+    return BlocConsumer<SignUpFormBloc, SignUpFormState>(
+        builder: (context, state) {
+          if (state.isSubmitting) {
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: const [
+                SizedBox(
+                  height: 8,
+                ),
+                LinearProgressIndicator(value: null)
+              ],
+            );
+          }
+
+          return const SizedBox(
+            height: 0,
+          );
+        },
+        listener: (context, state) {});
+  }
+
   Widget _backButton() {
     return InkWell(
       onTap: () {
@@ -377,6 +399,7 @@ class _SignUpState extends State<SignUp> {
                     _googleSignUpButton(),
                     SizedBox(height: height * .055),
                     _loginAccountLabel(),
+                    _progressIndicator()
                   ],
                 )),
               ),

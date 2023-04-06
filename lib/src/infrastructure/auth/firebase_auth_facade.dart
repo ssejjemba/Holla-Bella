@@ -38,12 +38,15 @@ class FirebaseAuthFacade implements IAuthFacade {
       await _firebaseAuth.createUserWithEmailAndPassword(
           email: emailAddressStr, password: passwordStr);
       return right(unit);
-    } on PlatformException catch (e) {
-      if (e.code == 'ERROR_EMAIL_ALREADY_IN_USE') {
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'account-exists-with-different-credential' ||
+          e.code == 'email-already-in-use') {
         return left(const AuthFailure.emailAlreadyInUse());
       } else {
         return left(const AuthFailure.serverError());
       }
+    } catch (e) {
+      return left(const AuthFailure.serverError());
     }
   }
 
@@ -58,13 +61,14 @@ class FirebaseAuthFacade implements IAuthFacade {
       await _firebaseAuth.signInWithEmailAndPassword(
           email: emailAddressStr, password: passwordStr);
       return right(unit);
-    } on PlatformException catch (e) {
-      if (e.code == 'ERROR_WRONG_PASSWORD' ||
-          e.code == 'ERROR_USER_NOT_FOUND') {
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'wrong-password' || e.code == 'user-not-found') {
         return left(const AuthFailure.invalidCredentials());
       } else {
         return left(const AuthFailure.serverError());
       }
+    } catch (e) {
+      return left(const AuthFailure.serverError());
     }
   }
 
@@ -84,7 +88,7 @@ class FirebaseAuthFacade implements IAuthFacade {
 
       await _firebaseAuth.signInWithCredential(authCredential);
       return right(unit);
-    } on PlatformException catch (e) {
+    } catch (e) {
       print(e);
       return left(const AuthFailure.serverError());
     }
