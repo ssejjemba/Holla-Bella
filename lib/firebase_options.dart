@@ -50,20 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAM3KsO79JUwUZhTLD-TGstaMpAtW4EYVA',
-    appId: '1:772975842816:android:1f0030f20f8823b9e76ae5',
-    messagingSenderId: '772975842816',
-    projectId: 'transparent-3cc31',
-    storageBucket: 'transparent-3cc31.appspot.com',
+    apiKey: 'AIzaSyAN73ykMOSDYoeHYfsj_o4sOa7ghWFR8C4',
+    appId: '1:602696846756:android:425d9a5caeee8d8752c531',
+    messagingSenderId: '602696846756',
+    projectId: 'holla-bella',
+    storageBucket: 'holla-bella.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAc2omrypXV_mQzW5TKoj1_94los4HX6Vk',
-    appId: '1:772975842816:ios:c3d6e087fce441d9e76ae5',
-    messagingSenderId: '772975842816',
-    projectId: 'transparent-3cc31',
-    storageBucket: 'transparent-3cc31.appspot.com',
-    iosClientId: '772975842816-972os87rvp9nabgivu9ejdfen0icpb3o.apps.googleusercontent.com',
-    iosBundleId: 'com.example.vpnApp',
+    apiKey: 'AIzaSyCD76XlnFfJBKsxjyA9AuAvUk4Ae_t3CAc',
+    appId: '1:602696846756:ios:8d3cecd166ee70e252c531',
+    messagingSenderId: '602696846756',
+    projectId: 'holla-bella',
+    storageBucket: 'holla-bella.appspot.com',
+    iosClientId: '602696846756-a4ds1di9tdsdis1og3edgi5lqm92knu6.apps.googleusercontent.com',
+    iosBundleId: 'com.example.hollaBella',
   );
 }

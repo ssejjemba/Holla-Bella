@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "602696846756",
+    "project_id": "holla-bella",
+    "storage_bucket": "holla-bella.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602696846756:android:425d9a5caeee8d8752c531",
+        "android_client_info": {
+          "package_name": "com.example.holla_bella"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602696846756-cojt5skkmjjsvg4h536r95vl8ufl92in.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAN73ykMOSDYoeHYfsj_o4sOa7ghWFR8C4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602696846756-cojt5skkmjjsvg4h536r95vl8ufl92in.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
